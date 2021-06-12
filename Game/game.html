@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta head = "viewport" content="width=device-width,initial-scale=1">
+        <title>lets play</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <style>
+            .container {
+                width: 350px;
+                height: 300px;
+                border: 2px;
+                display: grid;
+            }
+            button {
+                background-color: lightblue;
+                color: black;
+                font-size: 25px;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+
+        
+     
+               
+        <div class="container">
+            <button onclick="userinput()">GUESS A NUMBER (1-100) </button>
+        </div>     
+    
+        <center><b>Number: <input type="number" id="myNumber" value="2"></b></center>
+        <p id="demo"></p>  
+        <script>
+                document.getElementById("demo").innerHTML =
+                Math.floor(Math.random() * 100);
+                function userinput(){
+                    var x = document.getElementById("myNumber").value;
+                    document.getElementById("demo").innerHTML = x;
+                }
+        </script>
+    </body>
+  
+</html>    
